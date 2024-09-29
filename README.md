@@ -2,6 +2,9 @@ Michael Guay's REPO for reference:
 
 https://github.com/mguay22/sleepr/tree/main
 
+AWS branch:
+https://github.com/mguay22/sleepr/tree/aws
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
