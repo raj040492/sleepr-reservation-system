@@ -67,3 +67,5 @@ steps:
         'push',
         'asia-south1-docker.pkg.dev/reservation-system-437104/auth/production',
       ]
+options:
+  logging: CLOUD_LOGGING_ONLY
