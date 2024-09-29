@@ -19,7 +19,7 @@ async function bootstrap() {
   app.use(cookieParser());
   app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
   app.useLogger(app.get(Logger));
-
+  console.log('dummy console logger');
   await app.startAllMicroservices();
   await app.listen(configService.get('HTTP_PORT'));
 }
