@@ -1,6 +1,7 @@
 import {
   AUTH_SERVICE,
   DatabaseModule,
+  HealthModule,
   LoggerModule,
   PAYMENTS_SERVICE,
 } from '@app/common';
@@ -20,13 +21,14 @@ import { ReservationsService } from './reservations.service';
 @Module({
   imports: [
     DatabaseModule,
+    LoggerModule,
+    HealthModule,
     DatabaseModule.forFeature([
       {
         name: ReservationDocument.name,
         schema: ReservationSchema,
       },
     ]),
-    LoggerModule,
     ConfigModule.forRoot({
       isGlobal: true,
       validationSchema: Joi.object({

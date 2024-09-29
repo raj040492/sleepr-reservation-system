@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 
-import { LoggerModule } from '@app/common';
+import { HealthModule, LoggerModule } from '@app/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import * as Joi from 'joi';
@@ -14,6 +14,7 @@ import { UsersModule } from './users/users.module';
   imports: [
     UsersModule,
     LoggerModule,
+    HealthModule,
     ConfigModule.forRoot({
       isGlobal: true,
       validationSchema: Joi.object({
